@@ -51,20 +51,22 @@
             display: none;
         }
         .memory-slider {
-            width: 100%;
+            width: 90%; /* Adjust based on screen size */
+            margin: 20px auto;
             overflow: hidden;
             position: relative;
-            margin-top: 10px;
         }
         .memory-track {
             display: flex;
-            width: 700%;
+            width: 700%; /* 7 images * 100% */
             animation: scrollMemories 20s linear infinite;
         }
         .memory-track img {
-            width: 14.28%;
+            width: 14.28%; /* 100% / 7 images */
             flex-shrink: 0;
             transition: transform 0.5s;
+            border-radius: 10px;
+            margin: 0 5px;
         }
         @keyframes scrollMemories {
             0% { transform: translateX(0); }
@@ -111,6 +113,9 @@
             .venue, .activities {
                 width: 48%;
             }
+            .memory-slider {
+                width: 80%; /* Adjust for medium screens */
+            }
         }
         @media (min-width: 1024px) {
             .farewell-text {
@@ -118,6 +123,9 @@
             }
             .header {
                 font-size: 4rem;
+            }
+            .memory-slider {
+                width: 70%; /* Adjust for large screens */
             }
         }
     </style>
