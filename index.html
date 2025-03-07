@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell 2021-25</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .ball {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ff0000, #ff4500);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        .farewell-text {
+            font-size: 2rem;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            opacity: 0;
+        }
+        .header {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+        .memory-slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            margin-top: 10px;
+        }
+        .memory-track {
+            display: flex;
+            width: 700%;
+            animation: scrollMemories 20s linear infinite;
+        }
+        .memory-track img {
+            width: 14.28%;
+            flex-shrink: 0;
+            transition: transform 0.5s;
+        }
+        @keyframes scrollMemories {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+        .venue, .activities {
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .register {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .register a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: red;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        @media (min-width: 768px) {
+            .farewell-text {
+                font-size: 3rem;
+            }
+            .header {
+                font-size: 3rem;
+            }
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .venue, .activities {
+                width: 48%;
+            }
+        }
+        @media (min-width: 1024px) {
+            .farewell-text {
+                font-size: 4rem;
+            }
+            .header {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="ball" id="ball" onclick="explode()"></div>
+        <div class="farewell-text" id="farewell">Farewell <br>The Last Dance<br>Secure Your Spot Now!</div>
+    </div>
+    <div><h1>Farewell 2021-25</h1></div>
+    <div class="header" id="header">Farewell, See You Again!</div>
+    <div class="memory-slider" id="memory-slider">
+        <div class="memory-track">
+            <img src="1.webp" alt="Memory 1">
+            <img src="2.webp" alt="Memory 2">
+            <img src="3.jpg" alt="Memory 3">
+            <img src="4.webp" alt="Memory 4">
+            <img src="5.webp" alt="Memory 5">
+            <img src="memory6.jpg" alt="Memory 6">
+            <img src="memory7.jpg" alt="Memory 7">
+        </div>
+    </div>
+    <div class="content" id="content">
+        <div class="venue">
+            <h2>Venue:</h2>
+            <p>BLACK HORSE</p>
+            <p>Vijay Chowk, Gorakhpur, Uttar Pradesh 273001</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.6344187452423!2d83.36487237449901!3d26.756039966807677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399145e0796d1fd7%3A0x7bf252bec0fdc41a!2sBLACK%20HORSE%20Multi%20Cuisine%20Restaurant%20And%20Banquet%20Hall!5e0!3m2!1sen!2sin!4v1741290049905!5m2!1sen!2sin" width="100%" height="300" style="border:0; margin-top: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="activities">
+            <h2>Exciting Activities & Events</h2>
+            <hr><br>
+            <p>Dance – Set the stage on fire or just enjoy the vibes!</p><br>
+            <p>Mimicry & Jokes – Get ready for unstoppable laughter!</p><br>
+            <p>Shayari – Words straight from the heart!</p><br>
+            <p>Truth & Dare (Chit Game) – Pick a chit, reveal a name, and let the fun begin!</p><br>
+            <p>Final Pose & Exit – Strike a pose, make a memory, and exit in style!</p><br>
+            <hr><br>
+            <h2>Delicious & Unlimited Food and Drinks</h2>
+            <h2>Award Ceremony</h2>
+        </div>
+        <div class="register">
+            <p>You are in EARLY BIRD DISCOUNT – LIMITED TIME OFFER! where you have to pay ₹450 ONLY</p><br>
+            <p>Seats left: 40</p>
+            <a href="https://forms.gle/UuyQjoD56SnJ1yAD6" target="_blank">Register Here</a>
+        </div>
+    </div>
+    <script>
+        function explode() {
+            gsap.to("#ball", { scale: 3, opacity: 0, duration: 0.5, ease: "power4.out" });
+
+            setTimeout(() => {
+                document.getElementById("ball").style.display = "none";
+                document.getElementById("farewell").style.display = "block";
+                gsap.to("#farewell", { opacity: 1, scale: 1.2, duration: 1, ease: "bounce.out" });
+
+                setTimeout(() => {
+                    gsap.to("#farewell", { y: -100, duration: 1, ease: "power4.out" });
+
+                    setTimeout(() => {
+                        document.getElementById("container").style.display = "none"; // Hide the container to remove space
+                        document.getElementById("farewell").style.position = "relative"; // Ensure it stays at the top
+                        document.getElementById("farewell").classList.add("header");
+                        document.getElementById("header").remove(); // Remove the old hidden header
+                        document.getElementById("memory-slider").style.display = "block";
+                        document.getElementById("content").style.display = "block";
+
+                        gsap.to("#content", { opacity: 1, duration: 1.5, ease: "power2.inOut" });
+                    }, 500);
+                }, 1500);
+            }, 500);
+        }
+    </script>
+</body>
+</html>
